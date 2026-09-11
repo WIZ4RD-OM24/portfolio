@@ -109,11 +109,23 @@
         body: new FormData(form),
         headers: { Accept: 'application/json' }
       }).then(function (res) {
-        if (!res.ok) throw new Error('Request failed');
+        // Formspree explains refusals in the body; read it before deciding.
+        return res.json().catch(function () { return null; }).then(function (payload) {
+          if (res.ok) return;
+          console.error('Form submission failed', res.status, payload);
+          var detail = payload && (payload.error ||
+            (payload.errors && payload.errors.map(function (e) { return e.message; }).join('. ')));
+          var err = new Error(detail || 'The form service returned ' + res.status + '.');
+          err.fromServer = true;
+          throw err;
+        });
+      }).then(function () {
         form.reset();
         say('Thanks — message received. I will reply within one business day.', 'ok');
-      }).catch(function () {
-        say('Something went wrong. Please email me directly instead.', 'err');
+      }).catch(function (err) {
+        // Only show what the service actually said; never a raw network error.
+        var reason = err && err.fromServer ? err.message : 'Something went wrong sending that.';
+        say(reason + ' You can email me directly at omkarsanadi67@gmail.com.', 'err');
       }).then(function () {
         submitBtn.disabled = false;
         submitBtn.textContent = 'Send message';
