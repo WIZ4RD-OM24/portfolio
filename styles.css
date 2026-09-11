@@ -164,6 +164,10 @@ h1{font-size:clamp(2.4rem,6vw,4.1rem);font-weight:800;max-width:16ch}
 .t4{background:linear-gradient(135deg,#221d3b,#122b38)}
 .t5{background:linear-gradient(135deg,#0e2c36,#1d2a1f)}
 .t6{background:linear-gradient(135deg,#1c2b1f,#0f2a3b)}
+/* screenshot thumbnails: image fills the frame, scrim keeps the tag readable */
+.thumb.has-shot{place-items:end start;padding:14px}
+.thumb.has-shot::after{background:linear-gradient(to top,rgba(4,6,8,.75),rgba(4,6,8,0) 58%)}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center}
 .thumb-tag{
   position:relative;z-index:1;font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;
   color:var(--text);background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.12);
