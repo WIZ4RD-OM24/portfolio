@@ -39,6 +39,10 @@ The form posts via `fetch`, so the visitor never leaves the page: success and fa
 
 **Formspree only starts delivering after you confirm the address** — it emails you on the first submission. If enquiries are not arriving, check that first.
 
+**Do not turn on reCAPTCHA in the Formspree dashboard.** It expects a captcha token that only their own hosted form page produces, so every submission from this page is rejected. Spam protection here is the hidden `_gotcha` honeypot plus Formspree's own filtering. If spam ever becomes a real problem, add a honeypot with a delay check or move to a service whose captcha works with AJAX — do not re-enable that toggle.
+
+If the form starts failing, the on-page message now repeats whatever the service said, and the full response is logged to the browser console.
+
 Five fields are sent: `name`, `email`, `project_type`, `timeline`, `message`.
 
 To point the form somewhere else, change the `action` on the `<form>` in `index.html` — nothing else is hard-coded to Formspree.
