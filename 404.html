@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — Omkar</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<style>
+  /* Self-contained: a 404 can be served from any path, so it links to no other file. */
+  *{box-sizing:border-box}
+  body{margin:0;background:#0b0d10;color:#e8ecf1;min-height:100vh;display:grid;place-items:center;
+    text-align:center;padding:40px 24px;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+  .code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:clamp(4rem,16vw,9rem);font-weight:800;
+    line-height:1;margin:0;background:linear-gradient(100deg,#4ade80,#38bdf8);
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  h1{font-size:clamp(1.4rem,4vw,2rem);margin:8px 0 0;letter-spacing:-.02em}
+  p.msg{color:#98a3b0;margin:16px auto 32px;max-width:44ch}
+  a.btn{display:inline-block;background:#4ade80;color:#08120c;text-decoration:none;font-weight:600;
+    padding:13px 24px;border-radius:10px;transition:transform .15s ease}
+  a.btn:hover{transform:translateY(-2px)}
+</style>
+</head>
+<body>
+  <div>
+    <p class="code">404</p>
+    <h1>This page does not exist</h1>
+    <p class="msg">The link is broken or the page has moved. Head back to the homepage and start over.</p>
+    <a class="btn" id="home" href="/">Back to homepage</a>
+  </div>
+<script>
+  /* On a GitHub Pages project site the root is /<repo>/, not /. */
+  (function () {
+    var seg = location.pathname.split('/')[1];
+    if (location.hostname.indexOf('github.io') !== -1 && seg) {
+      document.getElementById('home').href = '/' + seg + '/';
+    }
+  })();
+</script>
+</body>
+</html>

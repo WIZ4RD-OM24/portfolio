@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4ade80"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.25" cy="0.2" r="0.8">
+      <stop offset="0" stop-color="#4ade80" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#4ade80" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0b0d10"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <text x="80" y="150" font-family="monospace" font-size="26" fill="#4ade80" letter-spacing="4">&lt;/&gt; OMKAR</text>
+  <text x="80" y="290" font-family="Inter,Segoe UI,sans-serif" font-size="76" font-weight="800" fill="#e8ecf1">I build fast websites</text>
+  <text x="80" y="380" font-family="Inter,Segoe UI,sans-serif" font-size="76" font-weight="800" fill="url(#g)">that win customers.</text>
+  <text x="80" y="460" font-family="Inter,Segoe UI,sans-serif" font-size="30" fill="#98a3b0">Marketing sites &#183; Web apps &#183; E-commerce</text>
+  <rect x="80" y="520" width="240" height="60" rx="12" fill="#4ade80"/>
+  <text x="200" y="558" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="22" font-weight="700" fill="#08120c">Start a project</text>
+</svg>

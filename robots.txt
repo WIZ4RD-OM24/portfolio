@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://WIZ4RD-OM24.github.io/portfolio/sitemap.xml
