@@ -25,13 +25,12 @@ Then visit http://localhost:5173
 
 ## Before you go live — five edits
 
-These are the only placeholders in the site. Search for the capitalised strings.
+Name (Omkar Sanadi) and email (omkarsanadi67@gmail.com) are already set. Two placeholders remain:
 
-1. **Your name** — `Omkar` appears in the title, nav brand, footer, and OG tags in `index.html`.
-2. **Your email** — replace `YOUR@EMAIL.COM` in the contact form note (`index.html`).
-3. **Formspree endpoint** — replace `YOUR_FORM_ID` in the form `action` (see below).
-4. **Your URL** — replace `https://WIZ4RD-OM24.github.io/portfolio/` in `index.html` (canonical + OG + JSON-LD), `robots.txt`, and `sitemap.xml`.
-5. **Projects, pricing, testimonials** — see "Honesty checklist" below.
+1. **Formspree endpoint** — replace `YOUR_FORM_ID` in the form `action` (see below).
+2. **Your URL** — replace `https://WIZ4RD-OM24.github.io/portfolio/` in `index.html` (canonical + OG + JSON-LD), `robots.txt`, and `sitemap.xml` if your repo or domain differs.
+
+Then work through the "Honesty checklist" below before sending the link to anyone.
 
 ## Wire up the contact form (free)
 
@@ -77,8 +76,20 @@ The site ships with realistic sample content so you can see the design working. 
 
 - [ ] **Projects** — replace all six with work you actually did. Delete the cards you cannot fill; three real projects beat six invented ones.
 - [ ] **Testimonials** — these are written samples. Delete the whole `#testimonials` section until you have real quotes with permission to publish them. A fake testimonial is the fastest way to lose a client who checks.
-- [ ] **Stats** — "24 projects shipped", "98 Lighthouse", "14 day turnaround" are placeholders. Use your real numbers or delete the `.stats` list.
-- [ ] **Prices** — set them to what you actually charge.
+- [ ] **Stats** — "5+ years" is yours, but "24 projects shipped" and "98 avg Lighthouse" are placeholders. Use your real numbers or delete those two `<li>` items.
+- [ ] **Package contents** — the comparison table is a sensible default, not a contract. Read every row and make sure you are genuinely willing to deliver each "Yes" at a fixed quote, and that each "Not included" is really excluded.
+
+## A note on pricing
+
+The site deliberately shows **no rupee figures** — only timelines and scope. This is the right call for Indian freelance work:
+
+- A published number anchors the negotiation before you know the client's budget, and you can only ever move down from it.
+- The same "5-page website" brief ranges from a weekend to a month depending on content, integrations, and how decisive the client is. One public price either loses you the big jobs or traps you on the small ones.
+- Competitors quoting ₹5,000 on a listing site make any honest number look expensive out of context. A conversation lets you sell the difference first.
+
+What replaces the number is specificity: exact scope, a firm timeline, and a comparison table that is candid about exclusions. That reads as more professional than a price tag, and it filters out people shopping purely on cost.
+
+When you do quote: put it in writing, mark it valid 30 days, state 50% advance / 50% on launch, and list the exclusions from the table explicitly so scope creep has a paper trail to bump against.
 
 ## Adding a project
 
