@@ -23,23 +23,25 @@ python -m http.server 5173
 
 Then visit http://localhost:5173
 
-## Before you go live — five edits
+## Before you go live
 
-Name (Omkar Sanadi) and email (omkarsanadi67@gmail.com) are already set. Two placeholders remain:
+Name, email and the contact form are all set. One placeholder remains:
 
-1. **Formspree endpoint** — replace `YOUR_FORM_ID` in the form `action` (see below).
-2. **Your URL** — replace `https://WIZ4RD-OM24.github.io/portfolio/` in `index.html` (canonical + OG + JSON-LD), `robots.txt`, and `sitemap.xml` if your repo or domain differs.
+- **Your URL** — replace `https://WIZ4RD-OM24.github.io/portfolio/` in `index.html` (canonical + OG + JSON-LD), `robots.txt`, and `sitemap.xml` if your repo or domain ever changes.
 
 Then work through the "Honesty checklist" below before sending the link to anyone.
 
-## Wire up the contact form (free)
+## The contact form
 
-1. Sign up at https://formspree.io (free tier: 50 submissions/month).
-2. Create a new form; it gives you an endpoint like `https://formspree.io/f/xyzabcde`.
-3. Paste that ID over `YOUR_FORM_ID` in the `<form action="...">` in `index.html`.
-4. Submit the form once yourself and confirm the address Formspree emails you.
+Submissions go to Formspree (`https://formspree.io/f/xqpkjozn`) and arrive by email. Free tier is 50 submissions a month; the dashboard keeps a copy of everything.
 
-The form posts via `fetch` so the visitor never leaves the page. If the endpoint is still the placeholder, the form refuses to submit and says so instead of silently failing. A hidden `_gotcha` field catches most spam bots.
+The form posts via `fetch`, so the visitor never leaves the page: success and failure both render inline, and a failure points them at the email address instead. A hidden `_gotcha` field catches most spam bots.
+
+**Formspree only starts delivering after you confirm the address** — it emails you on the first submission. If enquiries are not arriving, check that first.
+
+Five fields are sent: `name`, `email`, `project_type`, `timeline`, `message`.
+
+To point the form somewhere else, change the `action` on the `<form>` in `index.html` — nothing else is hard-coded to Formspree.
 
 ## Deploy to GitHub Pages (free)
 
