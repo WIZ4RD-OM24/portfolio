@@ -93,7 +93,32 @@ When you do quote: put it in writing, mark it valid 30 days, state 50% advance /
 
 ## Adding a project
 
-Copy one `<article class="proj">` block in `index.html`. The `data-tags` attribute drives the filter buttons — use `site`, `app`, `shop`, or several separated by spaces. Thumbnails are CSS gradients (`.t1`–`.t6` in `styles.css`); to use a real screenshot, drop it in `assets/` and replace the `<div class="thumb">` with an `<img>`.
+Copy one `<article class="proj">` block in `index.html`. The `data-tags` attribute drives the filter buttons — use `site`, `app`, `shop`, `mobile`, or several separated by spaces.
+
+### Thumbnails
+
+Screenshots live in `assets/shots/` and the frame is 16:10. Three variants:
+
+```html
+<!-- standard: roughly 16:10 source, fills the frame -->
+<div class="thumb has-shot"><img src="assets/shots/name.png" alt="..." width="1600" height="1000" loading="lazy" decoding="async"><span class="thumb-tag">Web app</span></div>
+
+<!-- wide: source much wider than 16:10, anchors left so the nav survives the crop -->
+<div class="thumb has-shot wide">...</div>
+
+<!-- portrait: a phone screen, letterboxed over a blurred copy of itself -->
+<div class="thumb has-shot portrait" style="--shot:url('assets/shots/name.jpg')">...</div>
+```
+
+Capture desktop shots at 1600×1000 so they stay sharp on retina screens. Headless Chrome does it without opening a window:
+
+```bash
+chrome --headless=new --hide-scrollbars --window-size=1600,1000 --virtual-time-budget=6000 --screenshot="out.png" "http://localhost:3000/"
+```
+
+Before publishing a screenshot of anything with a database behind it, check what is actually on screen — a dashboard full of real client names and billing figures should not go on a public page.
+
+The gradient tiles (`.t1`–`.t6` in `styles.css`) are still there as a fallback for projects you cannot screenshot.
 
 ## Notes
 
