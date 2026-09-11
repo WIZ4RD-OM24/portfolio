@@ -144,11 +144,16 @@ h1{font-size:clamp(2.4rem,6vw,4.1rem);font-weight:800;max-width:16ch}
 }
 .chip:hover{color:var(--text);border-color:#333e4a}
 .chip.is-active{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}
-.work-grid{align-items:start}
+.work-grid{align-items:stretch}
 .proj{
   background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-lg);
   overflow:hidden;transition:transform .25s ease,border-color .25s ease;
+  display:flex;flex-direction:column;
 }
+/* cards in a row share a height, so the read-more links line up */
+.proj-body{flex:1;display:flex;flex-direction:column}
+.proj-body .tags{margin-top:16px}
+.proj-body .link{margin-top:auto;padding-top:18px}
 .proj:hover{transform:translateY(-4px);border-color:#2e3843}
 .proj[hidden]{display:none}
 .thumb{position:relative;aspect-ratio:16/10;display:grid;place-items:center}

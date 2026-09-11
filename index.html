@@ -76,8 +76,8 @@
     </div>
     <ul class="stats reveal">
       <li><strong>5<em>+</em></strong><span>Years building for the web</span></li>
-      <li><strong>24</strong><span>Projects shipped</span></li>
-      <li><strong>98</strong><span>Avg. Lighthouse score</span></li>
+      <li><strong>4</strong><span>Stacks shipped in this year</span></li>
+      <li><strong>0</strong><span>Templates or page builders</span></li>
       <li><strong>100<em>%</em></strong><span>Fixed quote, no surprises</span></li>
     </ul>
   </div>
@@ -140,7 +140,7 @@
     <header class="sec-head reveal">
       <p class="kicker">Selected work</p>
       <h2>Recent projects</h2>
-      <p class="sub">A sample of what I have shipped. Every one of these went live and is still running.</p>
+      <p class="sub">Five things I have built recently &mdash; an offline-first Android app, a business dashboard, a legacy PHP rescue, and two storefronts.</p>
     </header>
 
     <div class="filters reveal">
@@ -148,61 +148,53 @@
       <button class="chip" data-filter="site" aria-pressed="false">Websites</button>
       <button class="chip" data-filter="app" aria-pressed="false">Web apps</button>
       <button class="chip" data-filter="shop" aria-pressed="false">E-commerce</button>
+      <button class="chip" data-filter="mobile" aria-pressed="false">Mobile</button>
     </div>
 
     <div class="grid-3 work-grid" id="work-grid">
-      <article class="proj reveal" data-tags="shop">
-        <div class="thumb t1"><span class="thumb-tag">E-commerce</span></div>
+      <article class="proj reveal" data-tags="mobile app">
+        <div class="thumb t1"><span class="thumb-tag">Android app</span></div>
         <div class="proj-body">
-          <h3>Northside Supply</h3>
-          <p>Custom storefront for an outdoor gear brand, replacing a slow hosted store. Checkout completion climbed in the first month after launch.</p>
-          <ul class="tags"><li>Next.js</li><li>Stripe</li><li>Sanity CMS</li></ul>
-          <a class="link" href="#contact">Case study on request &#8594;</a>
+          <h3>Ordo</h3>
+          <p>Offline-first Android app for solo cloud kitchens. Log what sold, and it tells you what to prep tonight, what to buy today, and whether the dish actually makes money &mdash; showing its working for every number. The forecaster weights recent same-weekday sales and adjusts for fast days and paydays, roughly halving error against a weekday-only baseline across 60 held-out days. Sales data never leaves the phone.</p>
+          <ul class="tags"><li>Kotlin</li><li>Android</li><li>Offline-first</li><li>Forecasting</li></ul>
+          <a class="link" href="#contact">Walkthrough on request &#8594;</a>
         </div>
       </article>
       <article class="proj reveal" data-tags="app">
         <div class="thumb t2"><span class="thumb-tag">Web app</span></div>
         <div class="proj-body">
-          <h3>Client Sites Console</h3>
-          <p>Dashboard tracking uptime, SEO health, hosting costs, and invoicing across an agency's client sites in a single screen.</p>
-          <ul class="tags"><li>React</li><li>TypeScript</li><li>Charts</li></ul>
-          <a class="link" href="#contact">Case study on request &#8594;</a>
-        </div>
-      </article>
-      <article class="proj reveal" data-tags="site">
-        <div class="thumb t3"><span class="thumb-tag">Website</span></div>
-        <div class="proj-body">
-          <h3>Meridian Dental</h3>
-          <p>Five-page site for a local clinic with online booking, service pages built for local SEO, and a CMS the front desk can edit.</p>
-          <ul class="tags"><li>Astro</li><li>Local SEO</li><li>Booking</li></ul>
-          <a class="link" href="#contact">Case study on request &#8594;</a>
+          <h3>Upkeep</h3>
+          <p>A dashboard for anyone maintaining a portfolio of client sites: uptime and response time, a nine-point on-page SEO score, domain and TLS expiry, and what each site costs to run against what the client pays &mdash; so the margin is visible per line. Sequential invoices autofill from billable renewals and print to PDF.</p>
+          <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>SQLite</li><li>Tailwind</li></ul>
+          <a class="link" href="#contact">Walkthrough on request &#8594;</a>
         </div>
       </article>
       <article class="proj reveal" data-tags="app">
-        <div class="thumb t4"><span class="thumb-tag">Web app</span></div>
+        <div class="thumb t3"><span class="thumb-tag">Web app</span></div>
         <div class="proj-body">
-          <h3>Virtual Stylist</h3>
-          <p>Internal tool that generates apparel catalog shots from product photos, with an approval queue and bulk export.</p>
-          <ul class="tags"><li>Python</li><li>API</li><li>Queue</li></ul>
-          <a class="link" href="#contact">Case study on request &#8594;</a>
+          <h3>Classroom</h3>
+          <p>Classroom management for schools and colleges &mdash; admins set up classes, subjects and staff; teachers post assignments and notices; students submit work. The interesting part was the rescue: a legacy codebase with a hand-built schema that had drifted from its models, given migrations that repair the drift in place and a base URL that refuses to trust a forged Host header.</p>
+          <ul class="tags"><li>PHP 8</li><li>CodeIgniter 4</li><li>MySQL</li><li>Migrations</li></ul>
+          <a class="link" href="#contact">Walkthrough on request &#8594;</a>
+        </div>
+      </article>
+      <article class="proj reveal" data-tags="shop site">
+        <div class="thumb t4"><span class="thumb-tag">Storefront demo</span></div>
+        <div class="proj-body">
+          <h3>Trendset Collection</h3>
+          <p>A clickable storefront built for a Nagpur clothing retailer trading since 2011, so they could browse their own shop before paying for it &mdash; collections, new arrivals, WhatsApp enquiries and store-visit details. Delivered with an itemised quotation covering packages, running costs and a four-week timeline.</p>
+          <ul class="tags"><li>Vanilla JS</li><li>Responsive</li><li>WhatsApp</li></ul>
+          <a class="link" href="#contact">See the demo &#8594;</a>
         </div>
       </article>
       <article class="proj reveal" data-tags="site">
         <div class="thumb t5"><span class="thumb-tag">Website</span></div>
         <div class="proj-body">
-          <h3>Harbour &amp; Co.</h3>
-          <p>Brand site for a consultancy. Long-form service pages, a reusable case study template, and a lead form wired into their CRM.</p>
-          <ul class="tags"><li>Next.js</li><li>CMS</li><li>CRM</li></ul>
-          <a class="link" href="#contact">Case study on request &#8594;</a>
-        </div>
-      </article>
-      <article class="proj reveal" data-tags="shop site">
-        <div class="thumb t6"><span class="thumb-tag">E-commerce</span></div>
-        <div class="proj-body">
-          <h3>Demo Storefront</h3>
-          <p>A clickable storefront demo used in pitches, so clients can walk a real cart and checkout before committing to a build.</p>
-          <ul class="tags"><li>Vanilla JS</li><li>Cart</li><li>Demo</li></ul>
-          <a class="link" href="#contact">Case study on request &#8594;</a>
+          <h3>Priyanka Finds</h3>
+          <p>A link-in-bio page for an Instagram affiliate account: searchable, sortable product finds driven by a single data file, plus a private browser-based editor that regenerates that file so the owner never touches code. No build step, no backend, no CMS bill &mdash; and ad slots stay invisible until AdSense approval lands.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>Vanilla JS</li><li>GitHub Pages</li></ul>
+          <a class="link" href="#contact">See the page &#8594;</a>
         </div>
       </article>
     </div>
