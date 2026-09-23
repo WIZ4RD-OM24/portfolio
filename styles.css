@@ -224,7 +224,7 @@ h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:700;letter-spacing:-.035em;line-
 .step p{color:var(--muted);font-size:.95rem}
 
 /* ---------- testimonials ---------- */
-.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
 .quote{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;display:flex;flex-direction:column;gap:24px}
 .quote blockquote{margin:0;font-size:1.08rem;line-height:1.55;color:var(--ink);letter-spacing:-.005em}
 .quote figcaption{display:grid;gap:2px;margin-top:auto;padding-top:20px;border-top:1px solid var(--line)}
@@ -344,8 +344,6 @@ button[disabled]{opacity:.6;cursor:progress;transform:none!important}
 /* ---------- responsive ---------- */
 @media (max-width:1024px){
   .steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}
-  .quotes{grid-template-columns:1fr 1fr}
-  .quotes .quote:last-child{grid-column:1/-1}
 }
 @media (max-width:900px){
   .hero-grid{grid-template-columns:1fr}
@@ -368,7 +366,6 @@ button[disabled]{opacity:.6;cursor:progress;transform:none!important}
   .nav-links a{padding:14px 0;border-bottom:1px solid var(--line);font-size:1rem;color:var(--ink)}
   .nav-links a.btn{margin-top:16px;border-bottom:0;justify-content:center;padding:13px 18px}
   .work-grid,.quotes{grid-template-columns:1fr}
-  .quotes .quote:last-child{grid-column:auto}
   .steps{grid-template-columns:1fr}
   .form .row{grid-template-columns:1fr}
   .hero-cta .btn{flex:1 1 auto}
