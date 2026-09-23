@@ -6,7 +6,7 @@
 <title>Omkar Sanadi — Web Developer | Sites, Web Apps &amp; Storefronts</title>
 <meta name="description" content="Freelance web developer with 5 years of experience building fast marketing sites, custom web apps and dashboards, and e-commerce storefronts for Indian businesses. Clear scope, fixed quote, shipped on time.">
 <link rel="canonical" href="https://WIZ4RD-OM24.github.io/portfolio/">
-<meta name="theme-color" content="#0b0d10">
+<meta name="theme-color" content="#ffffff">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Omkar Sanadi — Web Developer">
@@ -18,7 +18,8 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="stylesheet" href="styles.css">
 
 <script type="application/ld+json">
@@ -46,7 +47,7 @@
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="#top">
-      <span class="brand-mark">&lt;/&gt;</span>
+      <span class="brand-mark" aria-hidden="true">OS</span>
       <span class="brand-name">Omkar Sanadi</span>
     </a>
     <nav class="nav-links" id="nav-links" aria-label="Primary">
@@ -65,41 +66,42 @@
 
 <main id="main">
 <section class="hero" id="top">
-  <div class="glow" aria-hidden="true"></div>
-  <div class="wrap hero-inner">
-    <p class="eyebrow reveal"><span class="dot"></span> Available for new projects</p>
-    <h1 class="reveal">I build <span class="grad">fast websites</span> that turn visitors into customers.</h1>
-    <p class="lede reveal">Freelance web developer with five years of experience, working with founders and small teams on marketing sites, custom web apps, and online stores. Clear scope, one fixed quote, no agency overhead.</p>
-    <div class="hero-cta reveal">
-      <a class="btn btn-primary" href="#contact">Start a project</a>
-      <a class="btn btn-ghost" href="#work">See recent work</a>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>I build fast websites that turn visitors into customers.</h1>
+      <p class="lede">Freelance web developer with five years of experience, building websites, online stores, and web apps for shops, clinics, restaurants, and growing brands. Clear scope, one fixed quote, no agency overhead.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="#contact">Get a fixed quote</a>
+        <a class="btn btn-ghost btn-lg" href="#work">See recent work</a>
+      </div>
+      <p class="availability"><span class="status-dot" aria-hidden="true"></span>Available for new projects</p>
+      <ul class="facts">
+        <li><strong>5+</strong> years building for the web</li>
+        <li><strong>4</strong> stacks shipped this year</li>
+        <li><strong>0</strong> templates or page builders</li>
+        <li><strong>100%</strong> fixed quote, no surprises</li>
+      </ul>
     </div>
-    <ul class="stats reveal">
-      <li><strong>5<em>+</em></strong><span>Years building for the web</span></li>
-      <li><strong>4</strong><span>Stacks shipped in this year</span></li>
-      <li><strong>0</strong><span>Templates or page builders</span></li>
-      <li><strong>100<em>%</em></strong><span>Fixed quote, no surprises</span></li>
-    </ul>
+    <div class="hero-shots">
+      <figure class="browser">
+        <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+        <img src="assets/shots/upkeep.png" alt="Upkeep dashboard showing site status, yearly recurring revenue against running cost, upcoming renewals and recent invoices" width="1600" height="1000" fetchpriority="high" decoding="async">
+      </figure>
+      <figure class="phone">
+        <img src="assets/shots/ordo.jpg" alt="Ordo's Money screen showing what was left over from four weeks of sales and per-channel margins" width="590" height="1280" decoding="async">
+      </figure>
+    </div>
   </div>
-</section>
-
-<section class="strip" aria-label="Technologies">
-  <div class="marquee"><div class="marquee-track">
-    <span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span><span>Tailwind CSS</span><span>PostgreSQL</span><span>Shopify</span><span>Razorpay</span><span>Vite</span><span>Python</span><span>Figma</span><span>Cloudflare</span>
-    <span aria-hidden="true">React</span><span aria-hidden="true">Next.js</span><span aria-hidden="true">TypeScript</span><span aria-hidden="true">Node.js</span><span aria-hidden="true">Tailwind CSS</span><span aria-hidden="true">PostgreSQL</span><span aria-hidden="true">Shopify</span><span aria-hidden="true">Razorpay</span><span aria-hidden="true">Vite</span><span aria-hidden="true">Python</span><span aria-hidden="true">Figma</span><span aria-hidden="true">Cloudflare</span>
-  </div></div>
 </section>
 
 <section class="section" id="services">
   <div class="wrap">
-    <header class="sec-head reveal">
-      <p class="kicker">Services</p>
+    <header class="sec-head">
       <h2>Three things I do well</h2>
       <p class="sub">Everything is built from scratch, loads fast, works on every screen, and hands over cleanly so you are never locked in.</p>
     </header>
-    <div class="grid-3">
-      <article class="card reveal">
-        <div class="icon">&#9670;</div>
+    <div class="services">
+      <article class="service">
         <h3>Marketing websites</h3>
         <p>Landing pages and multi-page sites for businesses that need to look credible and rank on Google. Built for speed and conversions, not pulled off a template marketplace.</p>
         <ul class="ticks">
@@ -109,8 +111,7 @@
           <li>90+ Lighthouse on mobile</li>
         </ul>
       </article>
-      <article class="card reveal">
-        <div class="icon">&#9635;</div>
+      <article class="service">
         <h3>Web apps &amp; dashboards</h3>
         <p>Internal tools, client portals, and data dashboards. If your team runs the business out of a spreadsheet, this is the upgrade.</p>
         <ul class="ticks">
@@ -120,8 +121,7 @@
           <li>Charts, filters, exports</li>
         </ul>
       </article>
-      <article class="card reveal">
-        <div class="icon">&#9641;</div>
+      <article class="service">
         <h3>E-commerce storefronts</h3>
         <p>Stores that actually sell. Clean product pages, a checkout that does not leak customers, and payments wired up properly.</p>
         <ul class="ticks">
@@ -137,13 +137,12 @@
 
 <section class="section alt" id="work">
   <div class="wrap">
-    <header class="sec-head reveal">
-      <p class="kicker">Selected work</p>
+    <header class="sec-head">
       <h2>Recent projects</h2>
-      <p class="sub">Five things I have built recently &mdash; an offline-first Android app, a business dashboard, a legacy PHP rescue, and two storefronts.</p>
+      <p class="sub">Seven things I have built recently &mdash; a clothing store&rsquo;s online catalogue, a costume-rental shop&rsquo;s site, an offline-first Android app, a business dashboard, a live multiplayer game, a legacy PHP rescue, and a link-in-bio page.</p>
     </header>
 
-    <div class="filters reveal">
+    <div class="filters" role="group" aria-label="Filter projects">
       <button class="chip is-active" data-filter="all" aria-pressed="true">All</button>
       <button class="chip" data-filter="site" aria-pressed="false">Websites</button>
       <button class="chip" data-filter="app" aria-pressed="false">Web apps</button>
@@ -151,14 +150,32 @@
       <button class="chip" data-filter="mobile" aria-pressed="false">Mobile</button>
     </div>
 
-    <div class="grid-3 work-grid" id="work-grid">
+    <div class="work-grid" id="work-grid">
+      <article class="proj reveal" data-tags="shop site">
+        <div class="thumb has-shot"><img src="assets/shots/trendset.png" alt="Trendset Collection home page: the headline &ldquo;The whole family&rsquo;s wardrobe, under one roof&rdquo;, buttons to browse the collection or visit the store, and a WhatsApp button in the header" width="1600" height="1000" loading="lazy" decoding="async"><span class="thumb-tag">Online store</span></div>
+        <div class="proj-body">
+          <h3>Trendset Collection</h3>
+          <p>Catalogue and storefront for a family clothing store in Wani, Maharashtra. Shoppers filter the collection, reserve a size to try on in the shop, and enquire on WhatsApp with the product already filled in. Staff run everything from their own admin panel &mdash; products, photos, stock, opening hours &mdash; without calling a developer. Local SEO is built in, the site loads almost no JavaScript, and automated tests run through the shop and the admin panel on every change.</p>
+          <ul class="tags"><li>Astro</li><li>Cloudflare</li><li>SQLite</li><li>Playwright</li></ul>
+          <a class="link" href="#contact">Walkthrough on request <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+      <article class="proj reveal" data-tags="site">
+        <div class="thumb has-shot"><img src="assets/shots/ganuba.jpg" alt="Ganuba Creators home page in plum and gold with a marigold toran, the tagline &ldquo;Design, create, inspire.&rdquo; in English and Marathi, costume category arches and a Book on WhatsApp button" width="1600" height="1000" loading="lazy" decoding="async"><span class="thumb-tag">Website</span></div>
+        <div class="proj-body">
+          <h3>Ganuba Creators</h3>
+          <p>An English&ndash;Marathi site for a Pune costume-rental and tailoring shop that did not show up on Google at all. Every costume gets its own page, written for searches like &ldquo;Shivaji Maharaj costume on rent&rdquo;, and <em>Check availability</em> opens WhatsApp with the costume, date and group size already typed &mdash; one clear enquiry instead of twenty back-and-forth messages. Festival banners switch themselves on and off by date, so Ganeshotsav and Navratri offers never go stale.</p>
+          <ul class="tags"><li>Astro</li><li>Marathi</li><li>WhatsApp</li><li>Local SEO</li></ul>
+          <a class="link" href="#contact">Walkthrough on request <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
       <article class="proj reveal" data-tags="mobile app">
         <div class="thumb has-shot portrait" style="--shot:url('assets/shots/ordo.jpg')"><span class="device"><img src="assets/shots/ordo.jpg" alt="Ordo's Money screen showing what was left over from four weeks of sales, a day-by-day trend line, and per-channel margins for Swiggy and Zomato" width="590" height="1280" loading="lazy" decoding="async"></span><span class="thumb-tag">Android app</span></div>
         <div class="proj-body">
           <h3>Ordo</h3>
           <p>Offline-first Android app for solo cloud kitchens. Log what sold, and it tells you what to prep tonight, what to buy today, and whether the dish actually makes money &mdash; showing its working for every number. The forecaster weights recent same-weekday sales and adjusts for fast days and paydays, roughly halving error against a weekday-only baseline across 60 held-out days. Sales data never leaves the phone.</p>
           <ul class="tags"><li>Kotlin</li><li>Android</li><li>Offline-first</li><li>Forecasting</li></ul>
-          <a class="link" href="#contact">Walkthrough on request &#8594;</a>
+          <a class="link" href="#contact">Walkthrough on request <span aria-hidden="true">&#8594;</span></a>
         </div>
       </article>
       <article class="proj reveal" data-tags="app">
@@ -167,7 +184,16 @@
           <h3>Upkeep</h3>
           <p>A dashboard for anyone maintaining a portfolio of client sites: uptime and response time, a nine-point on-page SEO score, domain and TLS expiry, and what each site costs to run against what the client pays &mdash; so the margin is visible per line. Sequential invoices autofill from billable renewals and print to PDF.</p>
           <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>SQLite</li><li>Tailwind</li></ul>
-          <a class="link" href="#contact">Walkthrough on request &#8594;</a>
+          <a class="link" href="#contact">Walkthrough on request <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </article>
+      <article class="proj reveal" data-tags="app">
+        <div class="thumb has-shot"><img src="assets/shots/lookssketchy.jpg" alt="Looks Sketchy mid-game: a shared snowman drawing, a Discuss! prompt asking who is faking it, the turn order with five players, and a chat panel" width="1280" height="720" loading="lazy" decoding="async"><span class="thumb-tag">Multiplayer game</span></div>
+        <div class="proj-body">
+          <h3>Looks Sketchy</h3>
+          <p>A browser party game I built and run: everyone draws the same secret word, one player is faking it, and the table votes on who. Up to ten phones and laptops share one canvas in real time, and the server holds all game state, so the faker&rsquo;s browser never even receives the word. A two-player timed mode keeps a global leaderboard.</p>
+          <ul class="tags"><li>React</li><li>Node.js</li><li>Socket.IO</li><li>Real-time</li></ul>
+          <a class="link" href="https://lookssketchy.online/" rel="noopener">Play it live <span aria-hidden="true">&#8594;</span></a>
         </div>
       </article>
       <article class="proj reveal" data-tags="app">
@@ -176,16 +202,7 @@
           <h3>Classroom</h3>
           <p>Classroom management for schools and colleges &mdash; admins set up classes, subjects and staff; teachers post assignments and notices; students submit work. The interesting part was the rescue: a legacy codebase with a hand-built schema that had drifted from its models, given migrations that repair the drift in place and a base URL that refuses to trust a forged Host header.</p>
           <ul class="tags"><li>PHP 8</li><li>CodeIgniter 4</li><li>MySQL</li><li>Migrations</li></ul>
-          <a class="link" href="#contact">Walkthrough on request &#8594;</a>
-        </div>
-      </article>
-      <article class="proj reveal" data-tags="shop site">
-        <div class="thumb has-shot"><img src="assets/shots/trendset.png" alt="Trendset Collection storefront demo with a hero banner, collection tiles and a WhatsApp enquiry button" width="1600" height="1000" loading="lazy" decoding="async"><span class="thumb-tag">Storefront demo</span></div>
-        <div class="proj-body">
-          <h3>Trendset Collection</h3>
-          <p>A clickable storefront built for a Nagpur clothing retailer trading since 2011, so they could browse their own shop before paying for it &mdash; collections, new arrivals, WhatsApp enquiries and store-visit details. Delivered with an itemised quotation covering packages, running costs and a four-week timeline.</p>
-          <ul class="tags"><li>Vanilla JS</li><li>Responsive</li><li>WhatsApp</li></ul>
-          <a class="link" href="#contact">See the demo &#8594;</a>
+          <a class="link" href="#contact">Walkthrough on request <span aria-hidden="true">&#8594;</span></a>
         </div>
       </article>
       <article class="proj reveal" data-tags="site">
@@ -194,7 +211,7 @@
           <h3>Aesthetic Finds</h3>
           <p>A link-in-bio page for an Instagram affiliate account: searchable, sortable product finds driven by a single data file, plus a private browser-based editor that regenerates that file so the owner never touches code. No build step, no backend, no CMS bill &mdash; and ad slots stay invisible until AdSense approval lands.</p>
           <ul class="tags"><li>HTML</li><li>CSS</li><li>Vanilla JS</li><li>GitHub Pages</li></ul>
-          <a class="link" href="#contact">See the page &#8594;</a>
+          <a class="link" href="#contact">See the page <span aria-hidden="true">&#8594;</span></a>
         </div>
       </article>
     </div>
@@ -204,36 +221,34 @@
 
 <section class="section" id="process">
   <div class="wrap">
-    <header class="sec-head reveal">
-      <p class="kicker">Process</p>
+    <header class="sec-head">
       <h2>How a project runs</h2>
       <p class="sub">No mystery, no scope creep. You always know what happens next and what it costs.</p>
     </header>
     <ol class="steps">
-      <li class="step reveal"><span class="num">01</span><h3>Call &amp; scope</h3><p>A 30-minute call to understand the business, the goal, and what success looks like. You get a written scope and a fixed price within two days.</p></li>
-      <li class="step reveal"><span class="num">02</span><h3>Design</h3><p>Wireframes first, then a full design of the key pages. We iterate here, where changes are cheap, before a line of code is written.</p></li>
-      <li class="step reveal"><span class="num">03</span><h3>Build</h3><p>I build against a live preview link you can check any time. Weekly updates, never three weeks of silence.</p></li>
-      <li class="step reveal"><span class="num">04</span><h3>Launch &amp; handover</h3><p>Deploy, analytics, search console, and a walkthrough video of how to edit your own content. Thirty days of free fixes after launch.</p></li>
+      <li class="step"><span class="num">01</span><h3>Call &amp; scope</h3><p>A 30-minute call to understand the business, the goal, and what success looks like. You get a written scope and a fixed price within two days.</p></li>
+      <li class="step"><span class="num">02</span><h3>Design</h3><p>Wireframes first, then a full design of the key pages. We iterate here, where changes are cheap, before a line of code is written.</p></li>
+      <li class="step"><span class="num">03</span><h3>Build</h3><p>I build against a live preview link you can check any time. Weekly updates, never three weeks of silence.</p></li>
+      <li class="step"><span class="num">04</span><h3>Launch &amp; handover</h3><p>Deploy, analytics, search console, and a walkthrough video of how to edit your own content. Thirty days of free fixes after launch.</p></li>
     </ol>
   </div>
 </section>
 
 <section class="section alt" id="testimonials">
   <div class="wrap">
-    <header class="sec-head reveal">
-      <p class="kicker">Testimonials</p>
+    <header class="sec-head">
       <h2>What clients say</h2>
     </header>
-    <div class="grid-3">
-      <figure class="quote reveal">
+    <div class="quotes">
+      <figure class="quote">
         <blockquote>Our old site took nine seconds to load and we had no idea. He rebuilt it in three weeks and enquiries doubled the month after.</blockquote>
         <figcaption><strong>Priya N.</strong><span>Founder, Meridian Dental</span></figcaption>
       </figure>
-      <figure class="quote reveal">
+      <figure class="quote">
         <blockquote>Actually explains things instead of hiding behind jargon. The dashboard replaced four spreadsheets and saves us a day a week.</blockquote>
         <figcaption><strong>Daniel R.</strong><span>Operations, Harbour &amp; Co.</span></figcaption>
       </figure>
-      <figure class="quote reveal">
+      <figure class="quote">
         <blockquote>Fixed price, delivered early, and he stuck around after launch to fix the small stuff. I have already referred him twice.</blockquote>
         <figcaption><strong>Alex M.</strong><span>Owner, Northside Supply</span></figcaption>
       </figure>
@@ -243,13 +258,12 @@
 
 <section class="section" id="pricing">
   <div class="wrap">
-    <header class="sec-head reveal">
-      <p class="kicker">Packages</p>
+    <header class="sec-head">
       <h2>Pick the scope, get a fixed quote</h2>
       <p class="sub">Every project is priced individually, because a five-page clinic site and a booking platform are not the same job. Tell me what you need and you get one fixed number in INR before any work starts.</p>
     </header>
-    <div class="grid-3">
-      <article class="tier reveal">
+    <div class="tiers">
+      <article class="tier">
         <h3>Starter</h3>
         <p class="price"><span>timeline</span>~1 week</p>
         <p class="tier-sub">A single, sharp page for a launch, a campaign, or a service you want enquiries for.</p>
@@ -263,7 +277,7 @@
         </ul>
         <a class="btn btn-ghost full" href="#contact">Request a quote</a>
       </article>
-      <article class="tier featured reveal">
+      <article class="tier featured">
         <span class="badge">Most popular</span>
         <h3>Business</h3>
         <p class="price"><span>timeline</span>2&ndash;4 weeks</p>
@@ -280,7 +294,7 @@
         </ul>
         <a class="btn btn-primary full" href="#contact">Request a quote</a>
       </article>
-      <article class="tier reveal">
+      <article class="tier">
         <h3>Custom</h3>
         <p class="price"><span>timeline</span>scoped</p>
         <p class="tier-sub">Web apps, dashboards, and online stores. Priced after a discovery call, built in stages.</p>
@@ -298,7 +312,7 @@
       </article>
     </div>
 
-    <div class="compare reveal">
+    <div class="compare">
       <h3 class="compare-title">Compare what is included</h3>
       <p class="compare-sub">An honest list, including what each package does <em>not</em> cover, so nothing turns into a surprise invoice later.</p>
       <div class="table-scroll">
@@ -347,38 +361,42 @@
       </ul>
     </div>
 
-    <p class="note reveal">All quotes are in INR and agreed in writing before work begins &mdash; 50% to start, 50% on launch. GST extra where applicable. Domain, hosting, and any paid plugins are billed to you directly by those providers, never marked up by me. Working with a tight budget? Say so in your message; I would rather scope something honest than lose the conversation.</p>
+    <p class="note">All quotes are in INR and agreed in writing before work begins &mdash; 50% to start, 50% on launch. GST extra where applicable. Domain, hosting, and any paid plugins are billed to you directly by those providers, never marked up by me. Working with a tight budget? Say so in your message; I would rather scope something honest than lose the conversation.</p>
   </div>
 </section>
 
 <section class="section alt" id="faq">
-  <div class="wrap narrow">
-    <header class="sec-head reveal">
-      <p class="kicker">FAQ</p>
+  <div class="wrap faq-grid">
+    <header class="sec-head">
       <h2>Questions clients ask</h2>
+      <p class="sub">Something else on your mind? <a class="link" href="#contact">Ask me directly</a>.</p>
     </header>
     <div class="faq">
-      <details class="reveal"><summary>How long does a project take?</summary><p>A landing page is about a week. A business site is two to four weeks. Apps and stores depend on scope, but you get a date in writing before we start, and I hit it.</p></details>
-      <details class="reveal"><summary>Do I own the code and the site?</summary><p>Yes. Everything lives in your accounts and your repository. No proprietary builder, no hostage situation if you decide to move on.</p></details>
-      <details class="reveal"><summary>Can I edit content myself afterwards?</summary><p>That is the default. Business sites ship with a CMS, and I record a short walkthrough showing how to change text, images, and pages.</p></details>
-      <details class="reveal"><summary>Why are there no prices listed?</summary><p>Because an honest number needs five minutes of context. Two businesses asking for "a website" often need work that differs several times over in effort, and a fixed price on a page would either overcharge the simple job or underdeliver on the complex one. Tell me the scope and you get one firm quote in writing, valid for 30 days, with no hourly surprises after.</p></details>
-      <details class="reveal"><summary>What does hosting cost?</summary><p>Most sites I build run on free or near-free hosting. Budget roughly &#8377;0&ndash;&#8377;1,500 a month depending on traffic, plus about &#8377;800&ndash;&#8377;1,200 a year for a .com or .in domain. You pay those providers directly, so there is no markup from me.</p></details>
-      <details class="reveal"><summary>How do payments work?</summary><p>Half to begin, half when the site goes live. UPI, bank transfer, or Razorpay all work. You get a proper invoice for each, and GST applies where relevant.</p></details>
-      <details class="reveal"><summary>Do you redesign existing sites?</summary><p>Often. I audit what you have first and tell you honestly whether a rebuild is worth it or whether a few targeted fixes would do more for less.</p></details>
-      <details class="reveal"><summary>What happens after launch?</summary><p>Thirty days of free bug fixes. After that, either ad-hoc work at an hourly rate or a small monthly retainer covering updates, backups, and monitoring.</p></details>
+      <details><summary>How long does a project take?</summary><p>A landing page is about a week. A business site is two to four weeks. Apps and stores depend on scope, but you get a date in writing before we start, and I hit it.</p></details>
+      <details><summary>Do I own the code and the site?</summary><p>Yes. Everything lives in your accounts and your repository. No proprietary builder, no hostage situation if you decide to move on.</p></details>
+      <details><summary>Can I edit content myself afterwards?</summary><p>That is the default. Business sites ship with a CMS, and I record a short walkthrough showing how to change text, images, and pages.</p></details>
+      <details><summary>Why are there no prices listed?</summary><p>Because an honest number needs five minutes of context. Two businesses asking for "a website" often need work that differs several times over in effort, and a fixed price on a page would either overcharge the simple job or underdeliver on the complex one. Tell me the scope and you get one firm quote in writing, valid for 30 days, with no hourly surprises after.</p></details>
+      <details><summary>What does hosting cost?</summary><p>Most sites I build run on free or near-free hosting. Budget roughly &#8377;0&ndash;&#8377;1,500 a month depending on traffic, plus about &#8377;800&ndash;&#8377;1,200 a year for a .com or .in domain. You pay those providers directly, so there is no markup from me.</p></details>
+      <details><summary>How do payments work?</summary><p>Half to begin, half when the site goes live. UPI, bank transfer, or Razorpay all work. You get a proper invoice for each, and GST applies where relevant.</p></details>
+      <details><summary>Do you redesign existing sites?</summary><p>Often. I audit what you have first and tell you honestly whether a rebuild is worth it or whether a few targeted fixes would do more for less.</p></details>
+      <details><summary>What happens after launch?</summary><p>Thirty days of free bug fixes. After that, either ad-hoc work at an hourly rate or a small monthly retainer covering updates, backups, and monitoring.</p></details>
     </div>
   </div>
 </section>
 
 <section class="section contact" id="contact">
-  <div class="wrap narrow">
-    <header class="sec-head reveal">
-      <p class="kicker">Contact</p>
+  <div class="wrap contact-grid">
+    <div class="contact-intro">
       <h2>Tell me about your project</h2>
       <p class="sub">A couple of sentences is enough to start. I reply to every message within one business day.</p>
-    </header>
+      <ul class="contact-points">
+        <li><strong>Written scope and a fixed price</strong><span>Within two days of a 30-minute call.</span></li>
+        <li><strong>Half to begin, half on launch</strong><span>Quotes in INR, valid for 30 days, GST where applicable.</span></li>
+        <li><strong>You own everything</strong><span>Your accounts, your repository, no lock-in.</span></li>
+      </ul>
+    </div>
 
-    <form class="form reveal" id="contact-form" action="https://formspree.io/f/xqpkjozn" method="POST">
+    <form class="form" id="contact-form" action="https://formspree.io/f/xqpkjozn" method="POST">
       <div class="row">
         <label>Name
           <input type="text" name="name" required autocomplete="name" placeholder="Your name">
@@ -387,28 +405,30 @@
           <input type="email" name="email" required autocomplete="email" placeholder="you@company.com">
         </label>
       </div>
-      <label>What do you need?
-        <select name="project_type">
-          <option>Marketing website</option>
-          <option>Web app or dashboard</option>
-          <option>E-commerce store</option>
-          <option>Redesign of an existing site</option>
-          <option>Not sure yet</option>
-        </select>
-      </label>
-      <label>When do you want it live?
-        <select name="timeline">
-          <option>As soon as possible</option>
-          <option>Within a month</option>
-          <option>In one to three months</option>
-          <option>Just planning for now</option>
-        </select>
-      </label>
+      <div class="row">
+        <label>What do you need?
+          <select name="project_type">
+            <option>Marketing website</option>
+            <option>Web app or dashboard</option>
+            <option>E-commerce store</option>
+            <option>Redesign of an existing site</option>
+            <option>Not sure yet</option>
+          </select>
+        </label>
+        <label>When do you want it live?
+          <select name="timeline">
+            <option>As soon as possible</option>
+            <option>Within a month</option>
+            <option>In one to three months</option>
+            <option>Just planning for now</option>
+          </select>
+        </label>
+      </div>
       <label>Project details
         <textarea name="message" rows="5" required placeholder="What are you building, who is it for, and when do you need it live?"></textarea>
       </label>
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
-      <button class="btn btn-primary full" type="submit" id="submit-btn">Send message</button>
+      <button class="btn btn-primary btn-lg full" type="submit" id="submit-btn">Send message</button>
       <p class="form-note" id="form-status" role="status" aria-live="polite">Prefer email? Write to <a href="mailto:omkarsanadi67@gmail.com">omkarsanadi67@gmail.com</a></p>
     </form>
   </div>
@@ -418,7 +438,7 @@
 <footer class="footer">
   <div class="wrap footer-inner">
     <div>
-      <a class="brand" href="#top"><span class="brand-mark">&lt;/&gt;</span><span class="brand-name">Omkar Sanadi</span></a>
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">OS</span><span class="brand-name">Omkar Sanadi</span></a>
       <p class="foot-blurb">Freelance web developer. Websites, web apps, and online stores built to last.</p>
     </div>
     <nav class="foot-links" aria-label="Footer">

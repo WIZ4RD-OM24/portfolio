@@ -35,6 +35,20 @@
     if (e.key === 'Escape') setMenu(false);
   });
 
+  /* Play the reveal once, then drop the classes so the element's own
+     transitions and hover transforms take over again. */
+  function reveal(el) {
+    var done = function (e) {
+      if (e.target !== el) return; // ignore animations bubbling from children
+      el.removeEventListener('animationend', done);
+      el.removeEventListener('animationcancel', done);
+      el.classList.remove('reveal', 'in');
+    };
+    el.addEventListener('animationend', done);
+    el.addEventListener('animationcancel', done);
+    el.classList.add('in');
+  }
+
   /* ---- scroll reveal ---- */
   var revealables = $$('.reveal');
   if ('IntersectionObserver' in window) {
@@ -42,13 +56,13 @@
       entries.forEach(function (entry, i) {
         if (!entry.isIntersecting) return;
         var el = entry.target;
-        setTimeout(function () { el.classList.add('in'); }, Math.min(i * 60, 240));
+        setTimeout(function () { reveal(el); }, Math.min(i * 60, 240));
         io.unobserve(el);
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
     revealables.forEach(function (el) { io.observe(el); });
   } else {
-    revealables.forEach(function (el) { el.classList.add('in'); });
+    revealables.forEach(reveal);
   }
 
   /* ---- active nav link on scroll ---- */
@@ -71,22 +85,32 @@
   var chips = $$('.chip');
   var projects = $$('#work-grid .proj');
   var emptyMsg = $('#work-empty');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  // Unique names let the browser track each card across the reflow.
+  projects.forEach(function (p, i) { p.style.viewTransitionName = 'proj-' + i; });
   chips.forEach(function (chip) {
     chip.addEventListener('click', function () {
       var filter = chip.dataset.filter;
-      chips.forEach(function (c) {
-        var on = c === chip;
-        c.classList.toggle('is-active', on);
-        c.setAttribute('aria-pressed', String(on));
-      });
-      var shown = 0;
-      projects.forEach(function (p) {
-        var tags = (p.dataset.tags || '').split(/\s+/);
-        var match = filter === 'all' || tags.indexOf(filter) !== -1;
-        p.hidden = !match;
-        if (match) shown++;
-      });
-      if (emptyMsg) emptyMsg.hidden = shown !== 0;
+      var apply = function () {
+        chips.forEach(function (c) {
+          var on = c === chip;
+          c.classList.toggle('is-active', on);
+          c.setAttribute('aria-pressed', String(on));
+        });
+        var shown = 0;
+        projects.forEach(function (p) {
+          var tags = (p.dataset.tags || '').split(/\s+/);
+          var match = filter === 'all' || tags.indexOf(filter) !== -1;
+          p.hidden = !match;
+          if (match) shown++;
+        });
+        if (emptyMsg) emptyMsg.hidden = shown !== 0;
+      };
+      if (document.startViewTransition && !reduceMotion.matches) {
+        document.startViewTransition(apply);
+      } else {
+        apply();
+      }
     });
   });
 

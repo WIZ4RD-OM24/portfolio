@@ -80,9 +80,9 @@ Tick **Enforce HTTPS** once the certificate provisions. GitHub adds a `CNAME` fi
 
 The site ships with realistic sample content so you can see the design working. Before it goes in front of a client, every one of these must be true or gone:
 
-- [ ] **Projects** — replace all six with work you actually did. Delete the cards you cannot fill; three real projects beat six invented ones.
+- [x] **Projects** — all seven cards are real work. Keep it that way: delete a card rather than pad the grid.
 - [ ] **Testimonials** — these are written samples. Delete the whole `#testimonials` section until you have real quotes with permission to publish them. A fake testimonial is the fastest way to lose a client who checks.
-- [ ] **Stats** — "5+ years" is yours, but "24 projects shipped" and "98 avg Lighthouse" are placeholders. Use your real numbers or delete those two `<li>` items.
+- [x] **Stats** — confirmed accurate. Recheck "stacks shipped this year" each January.
 - [ ] **Package contents** — the comparison table is a sensible default, not a contract. Read every row and make sure you are genuinely willing to deliver each "Yes" at a fixed quote, and that each "Not included" is really excluded.
 
 ## A note on pricing
