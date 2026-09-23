@@ -5,6 +5,25 @@
   var $ = function (sel, ctx) { return (ctx || document).querySelector(sel); };
   var $$ = function (sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); };
 
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  /* ---- hero stats count up; the HTML already holds the final numbers ---- */
+  if (!reduceMotion.matches && window.requestAnimationFrame) {
+    $$('[data-count]').forEach(function (el) {
+      var end = +el.dataset.count;
+      var start = null;
+      el.style.minWidth = String(end).length + 'ch'; // no reflow as digits are added
+      // zeroed inside the first frame, so a page that never animates keeps the real number
+      var tick = function (now) {
+        if (start === null) start = now + 420; // land with the bars
+        var t = Math.max(0, Math.min(1, (now - start) / 1100));
+        el.textContent = Math.round(end * (1 - Math.pow(2, -10 * t)));
+        if (t < 1) requestAnimationFrame(tick); else el.textContent = end;
+      };
+      requestAnimationFrame(tick);
+    });
+  }
+
   /* ---- current year ---- */
   var year = $('#year');
   if (year) year.textContent = new Date().getFullYear();
@@ -85,9 +104,28 @@
   var chips = $$('.chip');
   var projects = $$('#work-grid .proj');
   var emptyMsg = $('#work-empty');
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   // Unique names let the browser track each card across the reflow.
   projects.forEach(function (p, i) { p.style.viewTransitionName = 'proj-' + i; });
+  /* the active pill is one element that slides to whichever chip is on */
+  var filters = $('.filters');
+  var ind = null;
+  var moveInd = function () {
+    var a = $('.chip.is-active');
+    if (!ind || !a) return;
+    ind.style.width = a.offsetWidth + 'px';
+    ind.style.height = a.offsetHeight + 'px';
+    ind.style.transform = 'translate(' + a.offsetLeft + 'px,' + a.offsetTop + 'px)';
+  };
+  if (filters) {
+    ind = document.createElement('span');
+    ind.className = 'chip-ind';
+    ind.setAttribute('aria-hidden', 'true');
+    filters.insertBefore(ind, filters.firstChild);
+    filters.classList.add('has-ind');
+    moveInd();
+    requestAnimationFrame(function () { ind.classList.add('ready'); });
+    if ('ResizeObserver' in window) new ResizeObserver(moveInd).observe(filters);
+  }
   chips.forEach(function (chip) {
     chip.addEventListener('click', function () {
       var filter = chip.dataset.filter;
@@ -105,9 +143,12 @@
           if (match) shown++;
         });
         if (emptyMsg) emptyMsg.hidden = shown !== 0;
+        moveInd();
       };
       if (document.startViewTransition && !reduceMotion.matches) {
-        document.startViewTransition(apply);
+        // the view transition slides the pill itself; its own CSS transition would double it
+        ind.classList.remove('ready');
+        document.startViewTransition(apply).finished.finally(function () { ind.classList.add('ready'); });
       } else {
         apply();
       }
